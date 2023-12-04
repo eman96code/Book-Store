@@ -1,0 +1,269 @@
+:root {
+  --paddingInline:30px;
+  --mainColor:#51BC88;
+  --secColor:#F0F9F4;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.container {
+  width: 70%;
+  margin: 0px auto;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+/* ---------------------Start navBar------------------ */
+.navBar {
+  background-color: var(--mainColor);
+  width: 100%; 
+}
+
+.navBar .container {
+  height: 60px;
+  display: flex; 
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+.logo {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  text-align: center; 
+}
+.logo img {
+  height: 100%;
+}
+.companyName {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+.logo span {
+  color: #fff;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+.navigation li {
+  list-style: none;
+}
+.navigation li a {
+  color: #fff;
+}
+/* ---------------------End navBar------------------ */
+/* --------------Start Search Section--------------- */
+section {
+  padding-block: 50px; 
+  padding-inline: 50px;
+  
+}
+.searchBox {
+  width: 100%;
+  border: 2px solid black;
+  height: 50px;
+  display: flex;
+}
+.inputSearch {
+  width: 80%;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.searchBtn {
+  width: 20%;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+/* -----------------End Search Section--------------- */
+.booxesSection {
+  background-color: var(--secColor);
+}
+.booksCard {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: auto;
+  column-gap: 2%;
+  row-gap: 30px;
+  justify-content: space-between;
+}
+.booksCard .container {
+  background-color: var(--secColor);
+}
+.bookCard {
+  height: 350px;
+  width: calc((100% /3) - 4%);
+  background-color: #fff;
+  border-radius: 20px;
+}
+.bookCard:hover {
+    transform: translate3d(0,-4px,0);
+    box-shadow: 0 12px 30px 0 rgba(0,0,0,.2);
+    transition-property: box-shadow,transform;
+    transition-duration: 600ms;
+    /* transition-timing-function: cubic-bezier(.16,1,.29,.99); */
+}
+.imageThumNail {
+  height: 45%;
+  border-radius: 20px;
+}
+.imageThumNail .imageCard {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 0px 20px 0px;
+  -webkit-border-radius: 20px 0px 20px 0px;
+  -moz-border-radius: 20px 0px 20px 0px;
+  -ms-border-radius: 20px 0px 20px 0px;
+  -o-border-radius: 20px 0px 20px 0px;
+}
+.imageDetails {
+  height: 60%;
+  padding: 20px;
+}
+.details a {
+  padding: 5px;
+}
+.headingCard,
+.imageDetails .paragraphCard,
+.imageDetails .bookAuther,
+.imageDetails .details {
+  margin-bottom: 5px;
+}
+.headingCard,
+.imageDetails .paragraphCard,
+.bookAuther  {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  line-height: 1em;
+  height: 2em; 
+  width: 100%; 
+}
+.bookAuther {
+  display: inline-block;
+}
+
+/* .buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+} */
+.details {
+  margin: 0px 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  /* background-color: var(--secColor); */
+  background-color: var(--mainColor);
+  color: #fff;
+  cursor: pointer;
+}
+.details .detailsBtnLink{
+  color: var(--mainColor);
+}
+
+/* ------------------------footer------------ */
+.footer {
+  background-color: var(--mainColor);
+  padding-block: var(--paddingInline);
+}
+.footer  .container {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  gap: 5%;
+}
+.footer .container p,
+.fa-heart {
+  text-align: left;
+}
+.footer .container > div:not(:last-child) {
+  width: 38%;
+}
+.footer .container > div:last-child {
+  width: 15%;
+}
+.footer .container > div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+  gap: 10px;
+}
+.footer .container h5,
+.footer .container i {
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap:20px;
+  width: 100%;
+}
+.email-input {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 12px;
+  width: 90%;
+  height: 100%;
+}
+.email-input i.fa-arrow-right {
+  background-color: var(--secColor);
+  padding: 10px;
+  font-size: 12px;
+  width: 10%;
+  height: 100%;
+}
+.companyName {
+  color: var(--secColor);
+}
+.icons {
+  gap: 15px;
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+}
+
+
